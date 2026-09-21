@@ -1,1 +1,1 @@
-Live demo: https://juliyasoya.github.io/Website-burger-cafe/
+Live demo: https://juliyasoya.github.io/Website_BurgerCafe/
