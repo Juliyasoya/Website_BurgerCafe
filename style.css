@@ -51,13 +51,13 @@ a {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1780px;
     margin-right: auto;
     margin-left: auto;
     padding-top: 16px;
-    padding-right: 20px;
+    padding-right: 32px;
     padding-bottom: 16px;
-    padding-left: 20px;
+    padding-left: 32px;
 }
 
 .navigation__list {
@@ -201,6 +201,7 @@ a {
 }
 
 .button--hero {
+    display: none;
     width: 100%;
     max-width: 268px;
     min-height: 58px;
@@ -254,7 +255,7 @@ a {
 
 .menu__container {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1780px;
     margin-right: auto;
     margin-left: auto;
     padding-top: 32px;
@@ -405,6 +406,10 @@ a {
 }
 
 @media (min-width: 577px) {
+    .button--hero {
+        display: inline-flex;
+    }
+
     .navigation__list {
         display: flex;
     }
@@ -424,6 +429,58 @@ a {
         width: 105px;
         font-size: 13px;
         text-align: left;
+    }
+
+    .hero__content {
+        position: absolute;
+        right: auto;
+        bottom: 0.91vw;
+        left: 50%;
+        z-index: 2;
+        display: block;
+        width: 75.45vw;
+        max-width: none;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        background-color: transparent;
+        transform: translateX(-50%);
+    }
+
+    .button--hero {
+        width: 10.52vw;
+        max-width: none;
+        min-height: 2.65vw;
+        padding-top: 0.64vw;
+        padding-right: 1.28vw;
+        padding-bottom: 0.64vw;
+        padding-left: 1.28vw;
+        font-size: 0.87vw;
+    }
+
+    .advantages {
+        grid-template-columns: auto auto auto;
+        width: auto;
+        max-width: 21.03vw;
+        margin-top: 0.64vw;
+        column-gap: 1.01vw;
+    }
+
+    .advantage {
+        column-gap: 0.46vw;
+    }
+
+    .advantage__icon {
+        width: 3.57vw;
+        height: 3.57vw;
+    }
+
+    .advantage__text {
+        width: auto;
+        font-size: 0.55vw;
     }
 
     .menu__heading-row {
@@ -490,6 +547,7 @@ a {
     }
 
     .navigation__actions {
+        margin-left: auto;
         column-gap: 4px;
     }
 
@@ -540,15 +598,20 @@ a {
     }
 
     .navigation__inner {
+        position: relative;
         min-height: 96px;
-        padding-top: 20px;
-        padding-right: 18px;
-        padding-bottom: 20px;
+        padding-top: 2vw;
+        padding-right: 32px;
+        padding-bottom: 0;
         padding-left: 365px;
     }
 
     .navigation__list {
+        position: absolute;
+        top: calc(50% + 1vw);
+        left: 50%;
         column-gap: 34px;
+        transform: translate(-50%, -50%);
     }
 
     .navigation__actions {
@@ -559,35 +622,39 @@ a {
         min-width: 136px;
     }
 
+    .menu-card__title {
+        font-size: 23px;
+    }
+}
+
+@media (min-width: 2187px) {
     .hero__content {
-        position: absolute;
-        right: 0;
+        right: auto;
         bottom: 20px;
-        left: 0;
-        z-index: 2;
-        display: block;
-        width: 100%;
-        max-width: 1280px;
-        margin-right: auto;
-        margin-left: auto;
-        padding-top: 0;
-        padding-right: 0;
-        padding-bottom: 0;
-        padding-left: 0;
-        background-color: transparent;
+        left: 50%;
+        width: 1650px;
+        max-width: 1650px;
+        transform: translateX(-50%);
     }
 
     .button--hero {
         width: 230px;
         min-height: 58px;
+        padding-top: 14px;
+        padding-right: 28px;
+        padding-bottom: 14px;
+        padding-left: 28px;
+        font-size: 19px;
     }
 
     .advantages {
-        grid-template-columns: auto auto auto;
-        width: auto;
         max-width: 460px;
         margin-top: 14px;
         column-gap: 22px;
+    }
+
+    .advantage {
+        column-gap: 10px;
     }
 
     .advantage__icon {
@@ -596,11 +663,6 @@ a {
     }
 
     .advantage__text {
-        width: auto;
         font-size: 12px;
-    }
-
-    .menu-card__title {
-        font-size: 23px;
     }
 }
