@@ -36,10 +36,10 @@
                     <a class="navigation__icon-link" href="#menu" aria-label="Поиск по меню">
                         <img class="navigation__icon navigation__icon--search" src="image/icon-search.png" alt="">
                     </a>
-                    <a class="navigation__icon-link" href="#menu" aria-label="Корзина">
+                    <button class="navigation__icon-link navigation__cart-button" type="button" aria-label="Открыть корзину" data-open-cart>
                         <img class="navigation__icon navigation__icon--cart" src="image/icon-cart.png" alt="">
                         <span class="navigation__counter">0</span>
-                    </a>
+                    </button>
                     <a class="button button--navigation" href="#menu">Заказать</a>
                 </div>
             </div>
@@ -90,63 +90,120 @@
                     <article class="menu-card" id="burgers">
                         <img class="menu-card__photo" src="image/menu-burgers.png" alt="Бургер с овощами и сыром">
                         <div class="menu-card__shade"></div>
-                        <a class="menu-card__link" href="#burgers" aria-label="Открыть раздел Бургеры">
+                        <button class="menu-card__link menu-card__button" type="button" aria-label="Открыть раздел Бургеры" data-category="burgers">
                             <span class="menu-card__title">Бургеры</span>
                             <span class="menu-card__arrow">→</span>
-                        </a>
+                        </button>
                     </article>
 
                     <article class="menu-card" id="snacks">
                         <img class="menu-card__photo" src="image/menu-snacks.png" alt="Картофель фри">
                         <div class="menu-card__shade"></div>
-                        <a class="menu-card__link" href="#snacks" aria-label="Открыть раздел Закуски">
+                        <button class="menu-card__link menu-card__button" type="button" aria-label="Открыть раздел Закуски" data-category="snacks">
                             <span class="menu-card__title">Закуски</span>
                             <span class="menu-card__arrow">→</span>
-                        </a>
+                        </button>
                     </article>
 
                     <article class="menu-card" id="salads">
                         <img class="menu-card__photo" src="image/menu-salads.png" alt="Салат с курицей и свежими овощами">
                         <div class="menu-card__shade"></div>
-                        <a class="menu-card__link" href="#salads" aria-label="Открыть раздел Салаты">
+                        <button class="menu-card__link menu-card__button" type="button" aria-label="Открыть раздел Салаты" data-category="salads">
                             <span class="menu-card__title">Салаты</span>
                             <span class="menu-card__arrow">→</span>
-                        </a>
+                        </button>
                     </article>
 
                     <article class="menu-card" id="chicken">
                         <img class="menu-card__photo" src="image/menu-chicken.jpg" alt="Хрустящая курица с соусом">
                         <div class="menu-card__shade"></div>
-                        <a class="menu-card__link" href="#chicken" aria-label="Открыть раздел Курица">
+                        <button class="menu-card__link menu-card__button" type="button" aria-label="Открыть раздел Курица" data-category="chicken">
                             <span class="menu-card__title">Курица</span>
                             <span class="menu-card__arrow">→</span>
-                        </a>
+                        </button>
                     </article>
 
                     <article class="menu-card" id="hot">
                         <img class="menu-card__photo" src="image/menu-hot.jpg" alt="Стейк с запечённым картофелем и овощами">
                         <div class="menu-card__shade"></div>
-                        <a class="menu-card__link" href="#hot" aria-label="Открыть раздел Горячее">
+                        <button class="menu-card__link menu-card__button" type="button" aria-label="Открыть раздел Горячее" data-category="hot">
                             <span class="menu-card__title">Горячее</span>
                             <span class="menu-card__arrow">→</span>
-                        </a>
+                        </button>
                     </article>
 
                     <article class="menu-card" id="desserts">
                         <img class="menu-card__photo" src="image/menu-desserts.jpg" alt="Шоколадный десерт с мороженым и ягодами">
                         <div class="menu-card__shade"></div>
-                        <a class="menu-card__link" href="#desserts" aria-label="Открыть раздел Десерты">
+                        <button class="menu-card__link menu-card__button" type="button" aria-label="Открыть раздел Десерты" data-category="desserts">
                             <span class="menu-card__title">Десерты</span>
                             <span class="menu-card__arrow">→</span>
-                        </a>
+                        </button>
                     </article>
                 </div>
             </div>
         </section>
     </main>
 
+    <div class="modal" id="products-modal" aria-hidden="true">
+        <div class="modal__overlay" data-close-modal></div>
+
+        <div class="modal__window modal__window--products" role="dialog" aria-modal="true" aria-labelledby="products-modal-title">
+            <button class="modal__close" type="button" aria-label="Закрыть окно" data-close-modal>×</button>
+
+            <p class="modal__eyebrow">ВЫБЕРИТЕ БЛЮДО</p>
+            <h2 class="modal__title" id="products-modal-title">Меню</h2>
+            <p class="modal__description">Добавьте понравившиеся позиции в корзину и укажите количество.</p>
+
+            <div class="products-list" id="products-list"></div>
+
+            <div class="modal__footer">
+                <div class="modal__total-block">
+                    <span class="modal__total-label">В корзине</span>
+                    <strong class="modal__total" id="products-modal-total">0 ₽</strong>
+                </div>
+
+                <button class="button modal__cart-button" type="button" data-open-cart>
+                    Перейти в корзину
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="cart-modal" aria-hidden="true">
+        <div class="modal__overlay" data-close-modal></div>
+
+        <div class="modal__window modal__window--cart" role="dialog" aria-modal="true" aria-labelledby="cart-modal-title">
+            <button class="modal__close" type="button" aria-label="Закрыть корзину" data-close-modal>×</button>
+
+            <p class="modal__eyebrow">ВАШ ЗАКАЗ</p>
+            <h2 class="modal__title" id="cart-modal-title">Корзина</h2>
+
+            <div class="cart__empty" id="cart-empty">
+                Корзина пока пуста. Выберите блюда из нашего меню.
+            </div>
+
+            <div class="cart__list" id="cart-list"></div>
+
+            <div class="cart__summary">
+                <div>
+                    <span class="cart__summary-label">Общая стоимость</span>
+                    <strong class="cart__summary-price" id="cart-total">0 ₽</strong>
+                </div>
+
+                <button class="button cart__buy-button" id="buy-button" type="button" disabled>
+                    Купить
+                </button>
+            </div>
+
+            <p class="cart__message" id="cart-message" aria-live="polite"></p>
+        </div>
+    </div>
+
     <footer class="footer" id="about">
         <p class="footer__description">Vintage Food — любимые бургеры уже у вас дома</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
