@@ -1,91 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel = "stylesheet" href = "style.css" >
+    <meta name="description" content="Vintage Food — настоящие бургеры с быстрой доставкой">
+    <title>Vintage Food — бургер-кафе</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <nav class = "nav">
-            <div class = "nav__logo">
-                <img class = "nav__img" src = "image/icon.png" alt = "Логотип Vintage Food">
-                <h1 class = "nav__name">Vintage Food</h1>
-            </div>
-            <div class = "nav__mainMenu">
-                <ul class = "nav__list">
-                    <li class = "nav__item">
-                        <a class = "nav__link"href = "#main">Главная</a>
+    <header class="hero" id="main">
+        <nav class="navigation" aria-label="Основная навигация">
+            <div class="navigation__inner">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#menu">Меню</a>
                     </li>
-                    <li class = "nav__item">
-                        <a class = "nav__link" href = "#stocks">Акции</a>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#burgers">Бургеры</a>
                     </li>
-                    <li class = "nav__item">
-                        <a class = "nav__link" href = "#aboutUs">О нас</a>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#snacks">Закуски</a>
                     </li>
-                    <li><img class="nav__imgBasket" src = "image/btnBasket.png" alt = "Изображение корзины заказа"></li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#salads">Салаты</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#about">О нас</a>
+                    </li>
                 </ul>
+
+                <div class="navigation__actions">
+                    <a class="navigation__icon-link" href="#menu" aria-label="Поиск по меню">
+                        <img class="navigation__icon navigation__icon--search" src="image/icon-search.png" alt="">
+                    </a>
+                    <a class="navigation__icon-link" href="#menu" aria-label="Корзина">
+                        <img class="navigation__icon navigation__icon--cart" src="image/icon-cart.png" alt="">
+                        <span class="navigation__counter">0</span>
+                    </a>
+                    <a class="button button--navigation" href="#menu">Заказать</a>
+                </div>
             </div>
         </nav>
 
-        <header class = "header">
-            <div class = "header__slogan">
-                <h4 class = "header__fastDelivery">Быстрая доставка для вас</h4>
-                <p class = "header__discount">Сделай первый заказ и получи скидку 50%</p>
-                <button class = "header__btnOrder">Заказать</button>
-            </div>
-            <img class = "header__imgBigBurger" src = "image/imgBurger.png" alt = "Изображение большого бургера">
-        </header>
+        <img class="hero__background" src="image/header.png" alt="Vintage Food. Быстрая доставка. Скидка 50 процентов на первый заказ">
 
-        <article class = "article">
-            <h2 class = "article__tableName">Меню</h2>
-            <div class = "article__table">
-                <section class = "article__card">
-                    <img class = "article__foodPhotos" src = "image/imgBurgers.png" alt = "Фото готового бургера из меню">
-                    <h5 class = "article__menuCaption">Бургеры</h5>
-                </section>
-                <section class = "article__card">
-                    <img class = "article__foodPhotos" src = "image/imgChickenButt.png" alt = "Фото готового бургера из меню">
-                    <h5 class = "article__menuCaption">Блюда из курицы</h5>
-                </section>
-                <section class = "article__card">
-                    <img class = "article__foodPhotos" src = "image/imgHotDishes.png" alt = "Фото готового бургера из меню">
-                    <h5 class = "article__menuCaption">Горячие</h5>
-                </section>
-            </div>
-                <div class = "article__table">
-                <section class = "article__card">
-                    <img class = "article__foodPhotos" src = "image/imgSnacks.png" alt = "Фото готового бургера из меню">
-                    <h5 class = "article__menuCaption">Закуски</h5>
-                </section>
-                <section class = "article__card">
-                    <img class = "article__foodPhotos" src = "image/imgSalads.png" alt = "Фото готового бургера из меню">
-                    <h5 class = "article__menuCaption">Салаты</h5>
-                </section>
-                <section class = "article__card">
-                    <img class = "article__foodPhotos" src = "image/imgDesserts.png" alt = "Фото готового бургера из меню">
-                    <h5 class = "article__menuCaption">Десерты</h5>
-                </section>
-            </div>
-        </article>
+        <div class="hero__content">
+            <a class="button button--hero" href="#menu">
+                <span>Заказать</span>
+            </a>
 
-        <footer class = "footer">
-            <div class = "footer__links">
-                <a class = "footer__link" href = "">Программа лояльности</a>
-                <a class = "footer__link" href = "">Политика конфиденциальности</a>
-                <a class = "footer__link" href = "">Договор оферты</a>
-            </div>
-            <p class="footer__company">ООО "Vintage Food"</p>
-            <p class="footer__copyright">© Все права защищены</p>
-            <div class = "footer__socialNetwork">
-                <img class = "footer__vk" src = "image/btnVK.png" alt = "Лого Вконтакте">
-                <img class = "footer__tg" src = "image/btnTelegram.png" alt = "Лого Телеграмма">
+            <div class="advantages">
+                <div class="advantage">
+                    <img class="advantage__icon" src="image/icon-delivery-scooter.png" alt="">
+                    <p class="advantage__text">Быстрая<br>доставка</p>
+                </div>
+
+                <div class="advantage">
+                    <img class="advantage__icon" src="image/icon-leaf.png" alt="">
+                    <p class="advantage__text">Свежие<br>ингредиенты</p>
+                </div>
+
+                <div class="advantage">
+                    <img class="advantage__icon" src="image/icon-chef-hat.png" alt="">
+                    <p class="advantage__text">Любимые<br>вкусы</p>
+                </div>
             </div>
         </div>
+    </header>
+
+    <main>
+        <section class="menu" id="menu">
+            <div class="menu__container">
+                <div class="menu__heading-row">
+                    <div>
+                        <p class="menu__eyebrow">НАШЕ МЕНЮ</p>
+                        <h1 class="menu__title">Выберите свой вкус</h1>
+                    </div>
+
+                    <a class="menu__all-link" href="#burgers">
+                        <span>Смотреть всё меню</span>
+                        <span class="menu__all-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="menu__grid">
+                    <article class="menu-card" id="burgers">
+                        <img class="menu-card__photo" src="image/menu-burgers.png" alt="Бургер с овощами и сыром">
+                        <div class="menu-card__shade"></div>
+                        <a class="menu-card__link" href="#burgers" aria-label="Открыть раздел Бургеры">
+                            <span class="menu-card__title">Бургеры</span>
+                            <span class="menu-card__arrow">→</span>
+                        </a>
+                    </article>
+
+                    <article class="menu-card" id="snacks">
+                        <img class="menu-card__photo" src="image/menu-snacks.png" alt="Картофель фри">
+                        <div class="menu-card__shade"></div>
+                        <a class="menu-card__link" href="#snacks" aria-label="Открыть раздел Закуски">
+                            <span class="menu-card__title">Закуски</span>
+                            <span class="menu-card__arrow">→</span>
+                        </a>
+                    </article>
+
+                    <article class="menu-card" id="salads">
+                        <img class="menu-card__photo" src="image/menu-salads.png" alt="Салат с курицей и свежими овощами">
+                        <div class="menu-card__shade"></div>
+                        <a class="menu-card__link" href="#salads" aria-label="Открыть раздел Салаты">
+                            <span class="menu-card__title">Салаты</span>
+                            <span class="menu-card__arrow">→</span>
+                        </a>
+                    </article>
+
+                    <article class="menu-card" id="chicken">
+                        <img class="menu-card__photo" src="image/menu-chicken.jpg" alt="Хрустящая курица с соусом">
+                        <div class="menu-card__shade"></div>
+                        <a class="menu-card__link" href="#chicken" aria-label="Открыть раздел Курица">
+                            <span class="menu-card__title">Курица</span>
+                            <span class="menu-card__arrow">→</span>
+                        </a>
+                    </article>
+
+                    <article class="menu-card" id="hot">
+                        <img class="menu-card__photo" src="image/menu-hot.jpg" alt="Стейк с запечённым картофелем и овощами">
+                        <div class="menu-card__shade"></div>
+                        <a class="menu-card__link" href="#hot" aria-label="Открыть раздел Горячее">
+                            <span class="menu-card__title">Горячее</span>
+                            <span class="menu-card__arrow">→</span>
+                        </a>
+                    </article>
+
+                    <article class="menu-card" id="desserts">
+                        <img class="menu-card__photo" src="image/menu-desserts.jpg" alt="Шоколадный десерт с мороженым и ягодами">
+                        <div class="menu-card__shade"></div>
+                        <a class="menu-card__link" href="#desserts" aria-label="Открыть раздел Десерты">
+                            <span class="menu-card__title">Десерты</span>
+                            <span class="menu-card__arrow">→</span>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="about">
+        <p class="footer__description">Vintage Food — любимые бургеры уже у вас дома</p>
     </footer>
 </body>
 </html>
